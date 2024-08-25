@@ -10,13 +10,13 @@ fn main() {
                 .value_name("TEXT")
                 .help("Input text")
                 .required(true)
-                .min_value(1),
+                .num_args(1..),
         )
         .arg(
             Arg::new("omit_newline")
                 .short('n')
                 .help("Do not print newline")
-                .takes_value(false),
+                .num_args(0),
         )
         .get_matches();
 
